@@ -14,28 +14,20 @@
 @text-color:            @ui-fg;
 @text-color-subtle:     fadeout(@text-color, 40%);
 @text-color-highlight:  lighten(@text-color, 20%);
-@text-color-selected:   hsl(48, 87%, 88%);
+@text-color-selected:   @gruvbox-fg0;
 
-@text-color-info:    hsl(157, 16%, 58%);
-@text-color-success: hsl(60, 71%, 35%);
-@text-color-warning: hsl(24, 88%, 45%);
-@text-color-error:   hsl(  5, 64%, 50%);
+@text-color-info:    @gruvbox-blue;
+@text-color-success: @gruvbox-green;
+@text-color-warning: @gruvbox-yellow;
+@text-color-error:   @gruvbox-orange;
 
-// @text-color-info:    hsl(157, 16%, 58%);
-// @text-color-success: hsl(61, 66%, 44%);
-// @text-color-warning: hsl(27, 99%, 55%);
-// @text-color-error:   hsl(  9, 100%, 64%);
 
 // Background -----------------
-@background-color-info:    hsl(157, 16%, 58%);
-@background-color-success: hsl(61, 66%, 44%);
-@background-color-warning: hsl(27, 99%, 55%);
-@background-color-error:   hsl(  9, 100%, 64%);
+@background-color-info:    @gruvbox-blue;
+@background-color-success: @gruvbox-green;
+@background-color-warning: @gruvbox-yellow;
+@background-color-error:   @gruvbox-orange;
 
-// @background-color-info:    hsl(157, 16%, 58%);
-// @background-color-success: hsl(60, 71%, 35%);
-// @background-color-warning: hsl(24, 88%, 45%)
-// @background-color-error:   hsl(  5, 64%, 50%);
 
 @background-color-highlight: lighten(@base-background-color, 4%);
 @background-color-selected:  lighten(@base-background-color, 8%);
@@ -69,7 +61,7 @@
 
 @button-background-color:          @level-1-color;
 @button-background-color-hover:    lighten(@button-background-color, 2%);
-@button-background-color-selected: @accent-bg-color;
+@button-background-color-selected: @accent-color;
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:         @level-3-color;
@@ -81,11 +73,11 @@
 @tree-view-background-color:       @level-3-color;
 @tree-view-border-color:           @base-border-color;
 
-@ui-site-color-1: hsl(157, 16%, 58%); // blue
-@ui-site-color-2: hsl(60, 71%, 35%);  // green
-@ui-site-color-3: @text-color-selected;  // orange
-@ui-site-color-4: hsl(333, 34%, 54%); // pink
-@ui-site-color-5: hsl(40, 73%, 49%);  // yellow
+@ui-site-color-1: @gruvbox-blue; // blue
+@ui-site-color-2: @gruvbox-green;  // green
+@ui-site-color-3: @gruvbox-orange;  // orange
+@ui-site-color-4: @gruvbox-purple; // pink
+@ui-site-color-5: @gruvbox-yellow;  // yellow
 
 
 // Sizes -----------------

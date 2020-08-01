@@ -4,7 +4,20 @@
 
 @import "syntax-variables";
 
-.ui-syntax-color() { @syntax-background-color: hsl(220,24%,20%); } .ui-syntax-color(); // fallback color
+// Gruvbox Colors -------
+@gruvbox-bg1: hsl(0, 0%, 16%);
+@gruvbox-grey: hsl(35, 17%, 59%);
+@gruvbox-fg: hsl(43, 59%, 81%);
+@gruvbox-fg0: hsl(48, 87%, 88%);
+@gruvbox-red: hsl(0, 100%, 26%);
+@gruvbox-green: hsl(45, 83%, 32%);
+@gruvbox-yellow: hsl(46, 100%, 34%);
+@gruvbox-blue: hsl(184, 100%, 26%);
+@gruvbox-purple: hsl(300, 17%, 45%);
+@gruvbox-aqua: hsl(180, 17%, 45%);
+@gruvbox-orange: hsl(33, 100%, 34%);
+
+.ui-syntax-color() { @syntax-background-color: @gruvbox-aqua; } .ui-syntax-color(); // fallback color
 @ui-syntax-color: @syntax-background-color;
 
 // Color guards -----------------
@@ -35,8 +48,9 @@
 
 // Main colors -----------------
 // @ui-fg:     hsl(@ui-hue, min(@ui-saturation, 18%), max(@ui-lightness*3, 66%) );
-@ui-fg:     hsl(35, 17%, 59%);
-@ui-bg:     hsl(@ui-hue, @ui-saturation, @ui-lightness); // normalized @syntax-background-color
+// @ui-bg:     hsl(@ui-hue, @ui-saturation, @ui-lightness); // normalized @syntax-background-color
+@ui-fg:     @gruvbox-grey;
+@ui-bg:     @gruvbox-bg1;
 @ui-border: hsl(@ui-hue, @ui-saturation, @ui-lightness-border);
 
 
@@ -71,7 +85,7 @@
 @accent-luma:             luma( hsl(@ui-hue, 50%, 50%) ); // get lightness of current hue
 
 // used for marker, inputs (smaller things)
-@accent-color:            mix( hsv( @ui-hue, 100%, 66%), hsl( @ui-hue, 100%, 70%), @accent-luma ); // mix hsv + hsl (favor mostly hsl)
+@accent-color: @gruvbox-orange;
 @accent-text-color:       contrast(@accent-color, hsl(@ui-hue,100%,10%), #fff, 25% );
 
 // used for button, tooltip (larger things)
